@@ -4,13 +4,64 @@ import { useState } from "react";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(null);
-
+const [showFAQ, setShowFAQ] = useState(false);
   return (
-    <main style={{ fontFamily: "Arial", background: "#f9fafb", color: "#111" }}>
+    <main style={{
+  fontFamily: "Arial",
+  background: "linear-gradient(180deg, #f9fafb05 0%, #f5eeee2d 100%)",
+  color: "#111",
+  minHeight: "100vh"
+}}>
+
+
+<style>
+{`
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+`}
+</style>
+
+
+
+{/* TOP BAR TEST */}
+<div
+  style={{
+    background: "black",
+    color: "white",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    padding: "10px",
+  }}
+>
+  <div
+    style={{
+      display: "inline-block",
+      animation: "moveText 20s linear infinite",
+    }}
+  >
+    •Turn Visitors Into Clients • Elevate Your Brand Online • Websites That Deliver Real Business Results ••Custom Website Packages Available • Tailored Solutions for Every Business • Start Your Project Today•
+  </div>
+
+  <style>
+    {`
+      @keyframes moveText {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+    `}
+  </style>
+</div>
+
+
+
+
 
       {/* NAVBAR */}
       <header>
         
+       
 
          <nav>
           
@@ -24,13 +75,66 @@ export default function Home() {
   src="/logo.png"
   alt="My Logo"
   style={{
-    width: "780px",
-    maxWidth: "90%",
+    width: "1000px",
+    maxWidth: "100%",
     height: "auto",
     margin: "0 auto",
     display: "block"
   }}
 />
+{/* HERO 3 IMAGES */}
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    marginTop: "40px",
+    flexWrap: "wrap"
+  }}
+>
+  <img
+    src="/img1.jpg"
+    alt="image 1"
+    style={{
+      width: "270px",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "15px",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+      transform: "translateY(-120px)",
+      transition: "0.3s ease"
+    }}
+  />
+
+  <img
+    src="/img2.jpg"
+    alt="image 2"
+    style={{
+      width: "270px",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "15px",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+      transform: "translateY(-120px)",
+      transition: "0.3s ease"
+    }}
+  />
+
+  <img
+    src="/img3.jpg"
+    alt="image 3"
+    style={{
+      width: "270px",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "15px",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+      transform: "translateY(-120px)",
+      transition: "0.3s ease"
+    }}
+  />
+</div>
+
 
         <p style={{ marginTop: "20px", fontSize: "13px", color: "#080707d0" }}>
           MLR is positioned as a premium digital partner for businesses that seek more than just a website but a powerful, results-driven online presence.
@@ -257,7 +361,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
       </section>
 
       {/* PORTFOLIO */}
-<section id="work" style={{ padding: "40px 10px", textAlign: "center" }}>
+<section id="work" style={{ padding: "60px 20px", textAlign: "center" }}>
   <h2 style={{ fontSize: "32px", fontWeight: "bold" }}>
   Why Choose MLR
 </h2>
@@ -324,7 +428,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
     <p style={{ margin: "10px 0", fontSize: "15px" }}>
       📱 WhatsApp:{" "}
       <a
-        href="https://wa.me/your-number"
+        href="https://wa.me/27659890691"
         target="_blank"
         style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
       >
@@ -336,7 +440,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
     <p style={{ margin: "10px 0", fontSize: "15px" }}>
       ✉️ Email:{" "}
       <a
-        href="mailto:yourbusiness@email.com"
+        href="mailto:mainlinerandyptyltd@email.com"
         style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
       >
         Send Email
@@ -355,6 +459,114 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
   `}</style>
 
 </section>
+
+{/* FAQ / TERMS & CONDITIONS SECTION */}
+<section
+  id="faq"
+  style={{
+    padding: "80px 20px",
+    maxWidth: "900px",
+    margin: "0 auto",
+    scrollMarginTop: "100px"
+  }}
+>
+  <h2 style={{ textAlign: "center", fontSize: "20px" }}>
+    FAQ / Terms & Conditions
+  </h2>
+
+<div
+  style={{
+    marginTop: "30px",
+    padding: "25px",
+    border: "1px solid #ddd",
+    borderRadius: "12px",
+    background: "#fff",
+    lineHeight: "1.8",
+    color: "#333"
+  }}
+>
+
+  <p>
+    Welcome to <strong>Mainline Randy (MLR)</strong>. By accessing our website or using our services, you agree to the following terms and conditions.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>1. Our Services</h3>
+  <p>
+    MLR provides professional website design, development, and digital solutions tailored to business needs. All services are delivered as outlined in an approved quotation or proposal.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>2. Quotations & Acceptance</h3>
+  <p>
+    All quotations are valid for 14 days unless otherwise stated.
+    Acceptance of a quotation, whether in writing or through payment, confirms your agreement to proceed and be bound by these terms.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>3. Payment Terms</h3>
+  <p>
+    A 50% non-refundable deposit is required before work begins.
+    The remaining 50% is due upon completion, before final delivery or website launch.
+    Clients must use their quotation or invoice number as the payment reference.
+    Proof of payment must be submitted to confirm allocation.
+    Failure to comply with payment terms may result in delays.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>4. Refund Policy</h3>
+  <p>
+    All payments are non-refundable. Due to the nature of digital services and time investment, refunds are not provided once work has commenced.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>5. Project Timelines</h3>
+  <p>
+    Project timelines are estimates and depend on client responsiveness. Delays in providing content, feedback, or approvals may affect delivery timelines.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>6. Client Responsibilities</h3>
+  <p>
+    Clients are responsible for:
+    <br />• Providing all required content and information
+    <br />• Ensuring content is lawful and does not infringe on any rights
+    <br />• Responding to communication in a timely manner
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>7. Revisions & Changes</h3>
+  <p>
+    Projects include a reasonable number of revisions. Additional changes outside the agreed scope may incur additional charges.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>8. Ownership</h3>
+  <p>
+    Full ownership of the website is transferred only after final payment has been received.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>9. Third-Party Services</h3>
+  <p>
+    MLR may utilise third-party services such as hosting providers or plugins. We are not responsible for downtime or issues caused by these providers.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>10. Limitation of Liability</h3>
+  <p>
+    MLR is not liable for any indirect or consequential damages, including loss of business or revenue.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>11. Data Protection</h3>
+  <p>
+    We respect your privacy and comply with the Protection of Personal Information Act (POPIA). Your information will only be used for business purposes.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>12. Governing Law</h3>
+  <p>
+    These terms are governed by the laws of the Republic of South Africa.
+  </p>
+
+  <h3 style={{ fontWeight: "bold", marginTop: "25px" }}>13. Contact Us</h3>
+  <p>
+    If you have any questions regarding these terms, please contact us directly.
+  </p>
+
+</div>
+</section>
+
+
 
 
 </main>

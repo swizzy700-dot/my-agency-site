@@ -14,7 +14,9 @@ export default function Navbar() {
       <nav style={{ display: "flex", gap: "20px" }}>
         <a href="#">Home</a>
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
+        <a href="#faq" style={{ cursor: "pointer" }}>
+  FAQ
+</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
