@@ -101,7 +101,7 @@ const [showFAQ, setShowFAQ] = useState(false);
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-      transform: "translateY(-120px)",
+      transform: "translateY(-80px)",
       transition: "0.3s ease"
     }}
   />
@@ -115,7 +115,7 @@ const [showFAQ, setShowFAQ] = useState(false);
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-      transform: "translateY(-120px)",
+      transform: "translateY(-80px)",
       transition: "0.3s ease"
     }}
   />
@@ -129,7 +129,7 @@ const [showFAQ, setShowFAQ] = useState(false);
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-      transform: "translateY(-120px)",
+      transform: "translateY(-80px)",
       transition: "0.3s ease"
     }}
   />
