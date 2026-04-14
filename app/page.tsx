@@ -70,7 +70,7 @@ const [showFAQ, setShowFAQ] = useState(false);
       </header>
 
       {/* HERO */}
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
+      <section style={{ padding: "7px 100px", textAlign: "center" }}>
         <img
   src="/logo.png"
   alt="My Logo"
@@ -144,7 +144,7 @@ const [showFAQ, setShowFAQ] = useState(false);
 <div className="bg-light" style={{ top: "60%", right: "10%" }}></div>
 
 
-        <p style={{ marginTop: "20px", fontSize: "13px", color: "#080707d0" }}>
+        <p style={{ marginTop: "30px", fontSize: "15px", color: "#0b0303b1" }}>
           MLR is positioned as a premium digital partner for businesses that seek more than just a website but a powerful, results-driven online presence.
 
 We work with ambitious brands, growing enterprises, and forward-thinking business owners who understand that investing in quality digital infrastructure is essential for long-term success.
@@ -168,202 +168,414 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
           margin: "40px auto"
         }}>
 
-          {/* CARD 1 */}
-          <div
-            onClick={() => setActive(active === 1 ? null : 1)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Professional Website Design & Development</h3>
+         {/* CARD 1 */}
+<div
+  onClick={() => setActive(active === 1 ? null : 1)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.24)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 1 ? "#111" : "#ffffff06",
+    color: active === 1 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Professional Website Design & Development
+  </h3>
 
-            {active === 1 && (
-              <ul>
-                <li>Business / Coporate Websites</li>
-                <li>E-commerce Stores</li>
-                <li>Landing Pages</li>
-                <li>Brochure Websites</li>
-                <li>Portfolio Websites</li>
-                <li>Blog / Content Websites</li>
-              </ul>
-            )}
-          </div>
-
+  <div
+    style={{
+      maxHeight: active === 1 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Business / Corporate Websites</li>
+      <li>E-commerce Stores</li>
+      <li>Landing Pages</li>
+      <li>Brochure Websites</li>
+      <li>Portfolio Websites</li>
+      <li>Blog / Content Websites</li>
+    </ul>
+  </div>
+</div>
  
         
     
           {/* CARD 2 */}
           <div
-            onClick={() => setActive(active === 2 ? null : 2)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Website Setup & Launch</h3>
+  onClick={() => setActive(active === 2 ? null : 2)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.24)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 2 ? "#111" : "#ffffff18",
+    color: active === 2 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Website Setup & Launch
+  </h3>
 
-            {active === 2 && (
-              <ul>
-                <li>Domain setup</li>
-                <li>Hosting setup</li>
-                <li>Full website deployment</li>
-                
-              </ul>
-            )}
-          </div>
-
+  <div
+    style={{
+      maxHeight: active === 2 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Domain setup</li>
+      <li>Hosting setuo</li>
+    
+     <li>Full Websites deployment</li>
+      
+    </ul>
+  </div>
+</div>
+ 
 
 
  {/* CARD 3 */}
           <div
-            onClick={() => setActive(active === 3 ? null : 3)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Website Maintenance & Support</h3>
+  onClick={() => setActive(active === 3 ? null : 3)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.21)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 3 ? "#111" : "#ffffff18",
+    color: active === 3 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Website Maintenance & Support
 
-            {active === 3 && (
-              <ul>
-                <li>Regular updates</li>
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 3 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Regular updates</li>
                 <li>Technical support</li>
                 <li>Backups</li>
                 <li>Minor changes</li>
                 
-              </ul>
-            )}
-          </div>
+
+    </ul>
+  </div>
+</div>
+ 
 
 
 
 {/* CARD 4 */}
           <div
-            onClick={() => setActive(active === 4 ? null : 4)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Website Performance Optimisation</h3>
+  onClick={() => setActive(active === 4 ? null : 4)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.22)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 4 ? "#111" : "#ffffff18",
+    color: active === 4 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Website Performance Optimisation
 
-            {active === 4 && (
-              <ul>
-                <li>Speed improvements</li>
+
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 4 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Speed improvements</li>
                 <li>Image optimisation</li>
                 <li>Performance tuning</li>
+
                 
-              </ul>
-            )}
-          </div>
+
+    </ul>
+  </div>
+</div>
+ 
+
 
 
 {/* CARD 5 */}
-          <div
-            onClick={() => setActive(active === 5 ? null : 5)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Website Security</h3>
+         <div
+  onClick={() => setActive(active === 5 ? null : 5)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.23)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 5 ? "#111" : "#ffffff18",
+    color: active === 5 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Branding & Website Package
 
-            {active === 5 && (
-              <ul>
-                <li>SSL setup</li>
-                <li>Security plugins</li>
-                <li>Basic protection</li>
-                
-              </ul>
-            )}
-          </div>
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 5 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Logo design</li>
+                <li>Brand styling</li>
+                <li>Full website design</li>
+
+
+              
+    </ul>
+  </div>
+</div>
+ 
+
 
 
 {/* CARD 6 */}
           <div
-            onClick={() => setActive(active === 6 ? null : 6)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Integrations & Add-Ons</h3>
+  onClick={() => setActive(active === 6 ? null : 6)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.18)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 6 ? "#111" : "#ffffff18",
+    color: active === 6 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Integrations & Add-Ons
 
-            {active === 6 && (
-              <ul>
-                <li>Payment integrations</li>
+
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 6 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Payment integrations</li>
                 <li>Booking systems</li>
                 <li>Chat systems</li>
                 <li>Email marketing integration</li>
                 <li>Speed plugins</li>
-                
-              </ul>
-            )}
-          </div>
+
+
+
+              
+    </ul>
+  </div>
+</div>
+ 
 
 
           {/* CARD 7 */}
           <div
-            onClick={() => setActive(active === 7 ? null : 7)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>SEO Optimisation</h3>
+  onClick={() => setActive(active === 7 ? null : 7)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.21)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 7 ? "#111" : "#ffffff18",
+    color: active === 7 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    SEO Optimisation
 
-            {active === 7 && (
-              <ul>
-                <li>Google Ranking</li>
+
+
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 7 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>Google Ranking</li>
                 <li>Speed Optimization</li>
                 <li>Meta Tags</li>
-              </ul>
-            )}
-          </div>
+
+   
+    </ul>
+  </div>
+</div>
+ 
+
 
 {/* CARD 8 */}
           <div
-            onClick={() => setActive(active === 8 ? null : 8)}
-            style={{
-              border: "1px solid #000",
-              padding: "20px",
-              borderRadius: "10px",
-              background: "white",
-              cursor: "pointer"
-            }}
-          >
-            <h3>Branding & Website Package</h3>
+  onClick={() => setActive(active === 8 ? null : 8)}
+  style={{
+    border: "1px solid rgba(0, 0, 0, 0.22)",
+    padding: "22px",
+    borderRadius: "16px",
+    background: active === 8 ? "#111" : "#ffffff18",
+    color: active === 8 ? "#ffffffea" : "#111",
+    cursor: "pointer",
+    maxWidth: "420px",
+    margin: "20px auto",
+    transition: "all 0.35s ease",
+    animation: "floatCard 4s ease-in-out infinite",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+  }}
+>
+  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
+    Website Security
 
-            {active === 8 && (
-              <ul>
-                <li>Logo design</li>
-                <li>Brand styling</li>
-                <li>Full website design</li>
-              </ul>
-            )}
-          </div>
+
+
+  </h3>
+
+  <div
+    style={{
+      maxHeight: active === 8 ? "200px" : "0px",
+      overflow: "hidden",
+      transition: "all 0.4s ease"
+    }}
+  >
+    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
+      <li>SSL setup</li>
+                <li>Security plugins</li>
+                <li>Basic protection</li>
+
+
+   
+    </ul>
+  </div>
+</div>
+ 
+
+
 
         </div>
       </section>
@@ -372,7 +584,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 
       {/* PORTFOLIO */}
 <section id="work" style={{ padding: "60px 20px", textAlign: "center" }}>
-  <h2 style={{ fontSize: "32px", fontWeight: "bold" }}>
+  <h2 style={{ fontSize: "25px", fontWeight: "bold" }}>
   Why Choose MLR
 </h2>
 
@@ -417,9 +629,9 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
       maxWidth: "300px",
       margin: "10px auto",
       padding: "10px",
-      border: "2px solid #000",
+      border: "2px solid #00000063",
       borderRadius: "12px",
-      background: "#ffffff1e",
+      background: "#ffffff",
       transition: "all 0.3s ease",
       cursor: "pointer",
       animation: "floatBox 3s ease-in-out infinite"
@@ -459,6 +671,126 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 
   </div>
 
+
+{/* ABOUT COMPANY */}
+<section
+  id="about-company"
+  style={{
+    padding: "80px 20px",
+    maxWidth: "900px",
+    margin: "0 auto",
+    textAlign: "left",
+    lineHeight: "1.8",
+    color: "#111"
+  }}
+>
+  <h2 style={{ fontSize: "30px", marginBottom: "20px" }}>
+    About
+  </h2>
+
+  <p style={{ marginBottom: "20px" }}>
+    Mainline Randy (MLR) is a premium digital solutions company dedicated to
+    crafting sophisticated, high-performance websites for businesses that value
+    excellence, credibility, and growth.
+  </p>
+
+  <p style={{ marginBottom: "20px" }}>
+    In today’s competitive landscape, a website is far more than a digital
+    presence it is a direct reflection of your brand’s quality, professionalism,
+    and ambition. At MLR, we specialise in transforming ideas into refined digital
+    experiences that not only capture attention but also inspire trust and drive
+    meaningful engagement.
+  </p>
+
+  <p style={{ marginBottom: "20px" }}>
+    Our approach is rooted in precision, attention to detail, and a deep
+    understanding of modern business needs. Each website we create is thoughtfully
+    designed to balance visual elegance with seamless functionality, ensuring an
+    experience that is both impactful and intuitive.
+  </p>
+
+  <p style={{ marginBottom: "20px" }}>
+    From corporate platforms and eCommerce solutions to strategic landing pages
+    and content-driven websites, we deliver tailored digital solutions that
+    elevate brand identity and position our clients ahead of the curve.
+  </p>
+
+  <p style={{ marginBottom: "40px" }}>
+    At MLR, we do not simply build websites we create digital assets that
+    enhance reputation, strengthen market presence, and support long-term
+    business success.
+  </p>
+
+  {/* VISION */}
+  <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>
+    Vision
+  </h3>
+
+  <p style={{ marginBottom: "30px" }}>
+    To establish MLR as a leading name in premium digital solutions,
+    recognised for delivering refined, high-quality websites that empower
+    businesses to stand out, scale, and succeed in a digital-first world.
+  </p>
+
+  {/* MISSION */}
+  <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>
+    Mission
+  </h3>
+
+  <p>
+    Our mission is to provide exceptional website solutions that combine modern
+    design, advanced functionality, and strategic thinking. We are committed to
+    helping businesses build a strong, credible online presence that not only
+    attracts attention but converts it into real opportunities.
+  </p>
+</section>
+
+{/* PROJECTS SECTION */}
+<section
+  id="projects"
+  style={{
+    padding: "80px 20px",
+    textAlign: "center"
+  }}
+>
+  <h2 style={{ fontSize: "25px", marginBottom: "40px" }}>
+    MLR Projects
+  </h2>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap"
+    }}
+  >
+
+    {/* CARD 1 */}
+    <div className="project-card">
+      <h3>Project 1</h3>
+      <p>Website link</p>
+      <button>View Project</button>
+    </div>
+
+    {/* CARD 2 */}
+    <div className="project-card">
+      <h3>Project 2</h3>
+      <p>Website link</p>
+      <button>View Project</button>
+    </div>
+
+    {/* CARD 3 */}
+    <div className="project-card">
+      <h3>Project 3</h3>
+      <p>Website link</p>
+      <button>View Project</button>
+    </div>
+
+  </div>
+</section>
+
+
   {/* ANIMATION STYLE */}
   <style jsx>{`
     @keyframes floatBox {
@@ -469,7 +801,6 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
   `}</style>
 
 </section>
-
 {/* FAQ / TERMS & CONDITIONS SECTION */}
 <section
   id="faq"
@@ -488,11 +819,11 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
   style={{
     marginTop: "30px",
     padding: "25px",
-    border: "1px solid #ddd",
+    border: "1px solid #dddddd",
     borderRadius: "12px",
-    background: "#fff",
+    background: "#ffffff00",
     lineHeight: "1.8",
-    color: "#333"
+    color: "#111010"
   }}
 >
 
@@ -577,8 +908,40 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 </section>
 
 
+{/* FOOTER */}
+<footer
+  style={{
+    padding: "40px 20px",
+    textAlign: "center",
+    borderTop: "1px solid #ddd",
+    marginTop: "60px",
+    color: "#555"
+  }}
+>
+  <p style={{ marginBottom: "10px", fontWeight: "500" }}>
+    Mainline Randy (MLR)
+  </p>
 
+  <p style={{ fontSize: "14px", marginBottom: "10px" }}>
+    Premium Digital Solutions • Websites that build credibility & growth
+
+
+  </p>
+
+
+<p style={{ fontSize: "12px", marginBottom: "8px" }}>
+   All content, designs, text, graphics, and intellectual property on this website are the exclusive property of Mainline Randy (MLR) and may not be reproduced, distributed, or used without prior written consent.
+ 
+
+  </p>
+
+
+  <p style={{ fontSize: "13px", color: "#888" }}>
+    © {new Date().getFullYear()} MLR. All Rights Reserved.
+  </p>
+</footer>
 
 </main>
 );
 }
+
