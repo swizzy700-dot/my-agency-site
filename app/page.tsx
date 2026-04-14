@@ -82,6 +82,9 @@ const [showFAQ, setShowFAQ] = useState(false);
     display: "block"
   }}
 />
+
+
+
 {/* HERO 3 IMAGES */}
 <div
   style={{
@@ -105,6 +108,8 @@ const [showFAQ, setShowFAQ] = useState(false);
       transition: "0.3s ease"
     }}
   />
+
+
 
   <img
     src="/img2.jpg"
@@ -134,6 +139,9 @@ const [showFAQ, setShowFAQ] = useState(false);
     }}
   />
 </div>
+
+<div className="bg-light" style={{ top: "10%", left: "15%" }}></div>
+<div className="bg-light" style={{ top: "60%", right: "10%" }}></div>
 
 
         <p style={{ marginTop: "20px", fontSize: "13px", color: "#080707d0" }}>
@@ -359,6 +367,8 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 
         </div>
       </section>
+
+
 
       {/* PORTFOLIO */}
 <section id="work" style={{ padding: "60px 20px", textAlign: "center" }}>
