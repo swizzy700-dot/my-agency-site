@@ -32,7 +32,7 @@ const [showFAQ, setShowFAQ] = useState(false);
     color: "white",
     whiteSpace: "nowrap",
     overflow: "hidden",
-    padding: "10px",
+    padding: "12px",
   }}
 >
   <div
@@ -70,13 +70,13 @@ const [showFAQ, setShowFAQ] = useState(false);
       </header>
 
       {/* HERO */}
-      <section style={{ padding: "7px 100px", textAlign: "center" }}>
+      <section style={{ padding: "1px 80px", textAlign: "center" }}>
         <img
   src="/logo.png"
   alt="My Logo"
   style={{
-    width: "1000px",
-    maxWidth: "100%",
+    width: "900px",
+    maxWidth: "110%",
     height: "auto",
     margin: "0 auto",
     display: "block"
@@ -145,7 +145,7 @@ const [showFAQ, setShowFAQ] = useState(false);
 
 
         <p style={{ marginTop: "30px", fontSize: "15px", color: "#0b0303b1" }}>
-          MLR is positioned as a premium digital partner for businesses that seek more than just a website but a powerful, results-driven online presence.
+MLR is positioned as a premium digital partner for businesses that seek more than just a website but a powerful, results-driven online presence.
 
 We work with ambitious brands, growing enterprises, and forward-thinking business owners who understand that investing in quality digital infrastructure is essential for long-term success.
 
@@ -583,7 +583,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 
 
       {/* PORTFOLIO */}
-<section id="work" style={{ padding: "60px 20px", textAlign: "center" }}>
+<section id="work" style={{ padding: "50px 20px", textAlign: "center" }}>
   <h2 style={{ fontSize: "25px", fontWeight: "bold" }}>
   Why Choose MLR
 </h2>
@@ -619,7 +619,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
     
         
  {/* CONTACT */}
-<section id="contact" style={{ padding: "60px 20px", textAlign: "center" }}>
+<section id="contact" style={{ padding: "50px 20px", textAlign: "center" }}>
 
   <h2>Contact Us</h2>
 
@@ -647,7 +647,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
   >
 
     {/* WhatsApp */}
-    <p style={{ margin: "10px 0", fontSize: "15px" }}>
+    <p style={{ margin: "7px 0", fontSize: "15px" }}>
       📱 WhatsApp:{" "}
       <a
         href="https://wa.me/27659890691"
@@ -658,8 +658,21 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
       </a>
     </p>
 
+{/* Phone Call */}
+<p style={{ margin: "50px 0", fontSize: "17px" }}>
+      📞 Call:{" "}
+      <a
+        href="tel:+27659890691"
+        target="_blank"
+        style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
+      >
+        Call Now
+      </a>
+    </p>
+
+
     {/* Email */}
-    <p style={{ margin: "10px 0", fontSize: "15px" }}>
+    <p style={{ margin: "1px 0", fontSize: "15px" }}>
       ✉️ Email:{" "}
       <a
         href="mailto:mainlinerandyptyltd@email.com"
@@ -749,7 +762,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 <section
   id="projects"
   style={{
-    padding: "80px 20px",
+    padding: "50px 20px",
     textAlign: "center"
   }}
 >
@@ -805,7 +818,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 <section
   id="faq"
   style={{
-    padding: "80px 20px",
+    padding: "50px 20px",
     maxWidth: "900px",
     margin: "0 auto",
     scrollMarginTop: "100px"
