@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Image from "next/image";
+
 export default function Home() {
   const [active, setActive] = useState<number | null>(null);
 const [showFAQ, setShowFAQ] = useState(false);
@@ -71,11 +73,13 @@ const [showFAQ, setShowFAQ] = useState(false);
 
       {/* HERO */}
       <section style={{ padding: "1px 80px", textAlign: "center" }}>
-        <img
-  src="/logo.png"
+        <Image
+  src="/logo.webp"
   alt="My Logo"
+  width={900}
+  height={400}
+  priority
   style={{
-    width: "900px",
     maxWidth: "110%",
     height: "auto",
     margin: "0 auto",
@@ -95,12 +99,13 @@ const [showFAQ, setShowFAQ] = useState(false);
     flexWrap: "wrap"
   }}
 >
-  <img
-    src="/img1.jpg"
+  <Image
+    src="/img1.webp"
     alt="image 1"
+    width={270}
+    height={250}
+    loading="lazy"
     style={{
-      width: "270px",
-      height: "250px",
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -109,14 +114,13 @@ const [showFAQ, setShowFAQ] = useState(false);
     }}
   />
 
-
-
-  <img
-    src="/img2.jpg"
+  <Image
+    src="/img2.webp"
     alt="image 2"
+    width={270}
+    height={250}
+    loading="lazy"
     style={{
-      width: "270px",
-      height: "250px",
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
@@ -125,12 +129,13 @@ const [showFAQ, setShowFAQ] = useState(false);
     }}
   />
 
-  <img
-    src="/img3.jpg"
+  <Image
+    src="/img3.webp"
     alt="image 3"
+    width={270}
+    height={250}
+    loading="lazy"
     style={{
-      width: "270px",
-      height: "250px",
       objectFit: "cover",
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",

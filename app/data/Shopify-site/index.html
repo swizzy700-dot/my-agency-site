@@ -1,93 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLR Store - E-commerce Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>MLR Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <!-- CART SIDEBAR -->
-<div id="cart-sidebar" class="cart-sidebar">
-  <h2>Your Cart</h2>
-  <ul id="cart-list"></ul>
-  <button onclick="closeCart()">Close</button>
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>EN / USD</span>
+  <span>Worldwide Shipping</span>
 </div>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1 class="logo">MLR Store</h1>
+<div id="productModal" class="modal">
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">Categories</a>
-      <a href="#" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a>
-    </nav>
-  </header>
+  <div class="modal-content">
+    <span class="close" onclick="closeProduct()">&times;</span>
 
-  <!-- HERO -->
-  <section class="hero">
-  <h2>Define Your Street Identity</h2>
-  <p>Urban streetwear built for confidence, movement, and culture</p>
-  <button>Shop Collection</button>
-</section>
+    <img id="modalImg" />
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
 
-  <!-- PRODUCTS -->
-  <section class="products">
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975682031-a6c2b8c0c5b8" />
-    <h3>Oversized Hoodie</h3>
-    <p>$65</p>
-    <button>Add to Cart</button>
+    <button onclick="addToCartFromModal()">Add to Cart</button>
   </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614" />
-    <h3>Urban Cargo Pants</h3>
-    <p>$70</p>
-    <button>Add to Cart</button>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="/logo.png" />
+    <span>MLR</span>
   </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" />
-    <h3>Streetwear Tee</h3>
-    <p>$40</p>
-    <button>Add to Cart</button>
+  <nav>
+    <a href="#">Women</a>
+    <a href="#">Men</a>
+    <a href="#">Accessories</a>
+    <a href="#">Climate + Impact</a>
+  </nav>
+
+  <div class="icons">
+    🔍 👤 🛒 <span id="cartCount">0</span>
+  </div>
+</header>
+
+<!-- HERO (VIDEO BACKGROUND SPACE) -->
+<section class="hero">
+
+<!-- 🔴 PUT YOUR VIDEO HERE -->
+  <!-- Example: <video autoplay muted loop src="video.mp4"></video> -->
+<video autoplay muted loop playsinline class="hero-video">
+  <source src="hero.mp4" type="video/mp4" />
+</video>
+
+  <div class="hero-content">
+
+  <h1 id="headline">Inspired by the Wind</h1>
+
+  <p>Discover the Spring Collection — Designed for Movement, Built for Style.</p>
+
+  <div class="hero-buttons">
+    <button>Shop Women</button>
+    <button class="outline">Shop Men</button>
+  </div>
+
+</div>
+
+</section>
+
+<div class="ticker">
+  <p>New Drops • Premium Quality • Sustainable Fashion • Limited Edition •</p>
+</div>
+
+<section class="impact">
+
+  <div class="impact-text">
+    <h2>Every Item Plants 10 Trees</h2>
+
+    <p>
+      Join us to protect the world we live in.
+      Every purchase contributes to sustainability and long-term environmental impact.
+    </p>
+
+    <button>Our Impact</button>
+    <button class="outline">About Us</button>
+  </div>
+
+  <!-- IMAGE STACK -->
+  <div class="impact-images">
+
+    <img src="img4.jpg" class="img img4" />
+    <img src="img5.jpg" class="img img5" />
+    <img src="img6.jpg" class="img img6" />
+
   </div>
 
 </section>
 
+<section class="products">
+  <h2>New Arrivals</h2>
+  <p>Women • Men • Accessories</p>
+
+  <div class="product-row">
+
+    <div class="card">
+      <img src="item1.jpg" />
+      <h3>Vintage Sunset Tee</h3>
+      <p>$245</p>
+    </div>
+
+    <div class="card">
+      <img src="item2.jpg" />
+      <h3>Urban Hoodie</h3>
+      <p>$48</p>
+    </div>
+
+    <div class="card">
+      <img src="item3.jpg" />
+      <h3>Minimal Tee</h3>
+      <p>$105</p>
+    </div>
+
+    <div class="card">
+      <img src="item4.jpg" />
+      <h3>Streetwear Fit</h3>
+      <p>$25</p>
+    </div>
+
+    <div class="card">
+      <img src="item5.jpg" />
+      <h3>Classic Tee</h3>
+      <p>$35</p>
+    </div>
+
+    <div class="card">
+      <img src="item6.jpg" />
+      <h3>Oversized Hoodie</h3>
+      <p>$65</p>
+    </div>
+
+    <div class="card">
+      <img src="item7.jpg" />
+      <h3>Relaxed Fit</h3>
+      <p>$75</p>
+    </div>
+
+    <div class="card">
+      <img src="item8.jpg" />
+      <h3>Modern Tee</h3>
+      <p>$55</p>
+    </div>
+
+  </div>
 </section>
 
-<section class="info">
-  <h2>About Urban Vault</h2>
+<section class="feature-cards">
+
+  <div class="feature green">
+    <h2>Build Your Digital Impact</h2>
+    <p>Create meaningful digital experiences that grow your brand presence and online identity.</p>
+    <button>Learn More</button>
+  </div>
+
+  <div class="feature dark">
+    <h2>Monthly Growth Systems</h2>
+    <p>Subscribe to continuous design updates, product expansions, and brand optimization tools.</p>
+    <button>Subscribe</button>
+  </div>
+
+</section>
+
+
+<section class="categories">
+  <h2>Most Popular Categories</h2>
+
+  <div class="cat-scroll">
+
+    <div class="cat">Women Sweaters →</div>
+    <div class="cat">Men Hoodies →</div>
+    <div class="cat">Women Hoodies →</div>
+    <div class="cat">Men Shirts →</div>
+    <div class="cat">Women Dresses →</div>
+    <div class="cat">Men T-Shirts →</div>
+    <div class="cat">Women Joggers →</div>
+    <div class="cat">Bags & Backpacks →</div>
+    <div class="cat">Hats & Beanies →</div>
+
+  </div>
+</section>
+
+<section class="rewards">
+  <h2>Get Rewarded for Doing Good</h2>
+
   <p>
-    Urban Vault is a streetwear concept brand inspired by modern city culture,
-    individuality, and movement. This project is designed to showcase
-    e-commerce UI/UX development skills.
+    Join our rewards program and earn points
+    that can be used on future purchases.
   </p>
+
+  <div class="reward-buttons">
+    <button>Create Account</button>
+    <button class="outline">Login</button>
+    <button>View Points</button>
+  </div>
 </section>
 
+<section class="products">
+  <h2>Bestsellers</h2>
+  <p>Women • Men • Accessories</p>
+
+  <div class="grid">
+
+    <!-- COPY THIS CARD MANY TIMES -->
+    <div class="card">
+      <img src="images/item2.jpg" />
+      <h3>TreeBlend Henley Long Sleeve</h3>
+      <p>$65</p>
+
+      <div class="colors">
+        <span class="color black"></span>
+        <span class="color green"></span>
+      </div>
+
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
 </section>
 
-  <!-- WHY US -->
-  <section class="info">
-    <h2>Why Shop With Us?</h2>
-    <ul>
-      <li>✔ Fast delivery</li>
-      <li>✔ High quality products</li>
-      <li>✔ Secure checkout experience</li>
-    </ul>
-  </section>
+<!-- SLIDE CART -->
+<div id="cart">
+  <h3>Your Cart</h3>
+  <div id="cartItems">Empty</div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 MLR Store. All rights reserved.</p>
-  </footer>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
+
+<div id="checkout" class="checkout">
+
+  <h2>Checkout</h2>
+
+  <input placeholder="Full Name" />
+  <input placeholder="Email" />
+  <input placeholder="Address" />
+
+  <button>Place Order</button>
+
+</div>
+
+<footer class="footer">
+
+  <!-- SUPPORT -->
+  <div>
+    <h3>Support</h3>
+    <p>Contact</p>
+    <p>Help Center</p>
+    <p>Shipping</p>
+    <p>Returns & Exchanges</p>
+    <p>FAQ</p>
+  </div>
+
+  <!-- COMPANY -->
+  <div>
+    <h3>Company</h3>
+    <p>About Us</p>
+    <p>Store Locator</p>
+    <p>Become a Partner</p>
+    <p>Corporate Orders</p>
+    <p>Careers</p>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div>
+    <h3>Certifications</h3>
+    <p>[Your Company Certifications Here]</p>
+  </div>
+
+  <!-- CONNECT -->
+  <div>
+    <h3>Connect</h3>
+    <p>Instagram</p>
+    <p>Facebook</p>
+    <p>YouTube</p>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div>
+    <h3>Join MLR Updates</h3>
+    <p>Get updates on new projects & digital releases</p>
+    <input placeholder="Email Address" />
+    <button>Subscribe</button>
+  </div>
+
+</footer>
+
+<div class="payments">
+  <p>We Accept:</p>
+  <p>Visa • Mastercard • PayPal • Apple Pay • Google Pay • Discover</p>
+</div>
+
+<div class="copyright">
+  © 2026 MLR. All Rights Reserved.
+</div>
