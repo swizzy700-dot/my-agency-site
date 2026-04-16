@@ -444,9 +444,201 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
 </section>
  
 
+{/* REVIEWS */}
+<section style={{ padding: "60px 20px", textAlign: "center" }}>
+  <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+    Client Reviews
+  </h2>
 
+  <p style={{ opacity: 0.7, marginTop: "10px" }}>
+    Trusted by businesses for quality, performance, and professionalism.
+  </p>
 
-      
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "20px",
+      flexWrap: "wrap",
+      marginTop: "40px"
+    }}
+  >
+
+    {/* REVIEW 1 */}
+    <div style={{
+      background: "#111",
+      color: "#fff",
+      padding: "20px",
+      borderRadius: "12px",
+      maxWidth: "280px"
+    }}>
+      <div style={{ color: "gold", marginBottom: "10px" }}>★★★★★</div>
+      <p>
+        The website performance is outstanding. Clean, fast, and highly professional.
+      </p>
+      <h4 style={{ marginTop: "10px" }}>— Business Owner</h4>
+    </div>
+
+    {/* REVIEW 2 */}
+    <div style={{
+      background: "#111",
+      color: "#fff",
+      padding: "20px",
+      borderRadius: "12px",
+      maxWidth: "280px"
+    }}>
+      <div style={{ color: "gold", marginBottom: "10px" }}>★★★★★</div>
+      <p>
+        MLR delivered beyond expectations. Everything feels premium and smooth.
+      </p>
+      <h4 style={{ marginTop: "10px" }}>— Brand Founder</h4>
+    </div>
+
+    {/* REVIEW 3 */}
+    <div style={{
+      background: "#111",
+      color: "#fff",
+      padding: "20px",
+      borderRadius: "12px",
+      maxWidth: "280px"
+    }}>
+      <div style={{ color: "gold", marginBottom: "10px" }}>★★★★☆</div>
+      <p>
+        Strong communication and top-quality work. Highly recommended.
+      </p>
+      <h4 style={{ marginTop: "10px" }}>— Startup Client</h4>
+    </div>
+
+  </div>
+</section>
+
+      {/* PRICING */}
+<section style={{ padding: "60px 20px", textAlign: "center" }}>
+  <h2 style={{ fontSize: "28px", fontWeight: "bold" }}>
+    Website Solutions
+  </h2>
+
+  {/* MAIN SERVICES */}
+  <div style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+    marginTop: "40px"
+  }}>
+
+    <div style={{
+      border: "1px solid rgba(0,0,0,0.2)",
+      padding: "20px",
+      borderRadius: "12px",
+      width: "260px"
+    }}>
+      <h3>Professional Websites</h3>
+      <p style={{ color: "#010101", marginTop: "10px" }}>
+        Starting from $2,000
+      </p>
+    </div>
+
+    <div style={{
+      border: "1px solid rgba(0,0,0,0.2)",
+      padding: "20px",
+      borderRadius: "12px",
+      width: "260px"
+    }}>
+      <h3>eCommerce Solutions</h3>
+      <p style={{ color: "#010101", marginTop: "10px" }}>
+        Starting from $3,000
+      </p>
+    </div>
+
+    <div style={{
+      border: "1px solid rgba(0,0,0,0.2)",
+      padding: "20px",
+      borderRadius: "12px",
+      width: "260px"
+    }}>
+      <h3>Premium Custom Websites</h3>
+      <p style={{ color: "#010101", marginTop: "10px" }}>
+        From $3,500+
+      </p>
+    </div>
+
+  </div>
+
+  {/* ONGOING */}
+  <h2 style={{ marginTop: "50px" }}>Ongoing Services</h2>
+
+  <div style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+    marginTop: "20px"
+  }}>
+
+    <div style={{
+      border: "1px solid rgba(0,0,0,0.2)",
+      padding: "20px",
+      borderRadius: "12px",
+      width: "260px"
+    }}>
+      <h3>Website Care Plans</h3>
+      <p style={{ color: "#010101", marginTop: "10px" }}>
+        From $200/month
+      </p>
+    </div>
+
+    <div style={{
+      border: "1px solid rgba(0,0,0,0.2)",
+      padding: "20px",
+      borderRadius: "12px",
+      width: "260px"
+    }}>
+      <h3>Managed Hosting</h3>
+      <p style={{ color: "#010101", marginTop: "10px" }}>
+        From $100/month
+      </p>
+    </div>
+
+  </div>
+
+  {/* NOTE + CTA */}
+  <div style={{
+    marginTop: "40px",
+    maxWidth: "600px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    opacity: 0.8
+  }}>
+    <p>
+      Advanced features such as booking systems, payment integrations, and marketing tools are available as tailored add-ons.
+    </p>
+
+    <p style={{ marginTop: "10px" }}>
+      Every project is uniquely structured based on your specific requirements.
+      We invite you to get in touch for a tailored quotation.
+    </p>
+
+    <button
+  onClick={() =>
+    window.location.href =
+      "mailto:mainlinerandyptyltd@email.com?subject=Quote Request from Website&body=Hi MLR,%0D%0A%0D%0AI would like to request a quote for a website project.%0D%0A%0D%0AThank you."
+  }
+  style={{
+    marginTop: "20px",
+    padding: "12px 25px",
+    background: "#111",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    transition: "all 0.3s ease"
+  }}
+>
+  Request a Quote
+</button>
+  </div>
+</section>
 
 
       {/* PORTFOLIO */}
