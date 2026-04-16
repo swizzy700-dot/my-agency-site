@@ -96,7 +96,9 @@ const [showFAQ, setShowFAQ] = useState(false);
     justifyContent: "center",
     gap: "20px",
     marginTop: "40px",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    position: "relative",
+    zIndex: 1
   }}
 >
   <Image
@@ -110,7 +112,8 @@ const [showFAQ, setShowFAQ] = useState(false);
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
       transform: "translateY(-80px)",
-      transition: "0.3s ease"
+      transition: "0.3s ease",
+      pointerEvents: "none"
     }}
   />
 
@@ -125,7 +128,8 @@ const [showFAQ, setShowFAQ] = useState(false);
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
       transform: "translateY(-80px)",
-      transition: "0.3s ease"
+      transition: "0.3s ease",
+      pointerEvents: "none"
     }}
   />
 
@@ -140,7 +144,8 @@ const [showFAQ, setShowFAQ] = useState(false);
       borderRadius: "15px",
       boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
       transform: "translateY(-80px)",
-      transition: "0.3s ease"
+      transition: "0.3s ease",
+      pointerEvents: "none"
     }}
   />
 </div>
@@ -158,433 +163,290 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
         </p>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" style={{ padding: "60px 20px" }}>
-
-        <h2 style={{ textAlign: "center", fontSize: "32px", fontWeight: "bold" }}>
-          Our Services
-        </h2>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "20px",
-          maxWidth: "1000px",
-          margin: "40px auto"
-        }}>
-
-         {/* CARD 1 */}
-<div
-  onClick={() => setActive(active === 1 ? null : 1)}
+    {/* SERVICES */}
+<section
+  id="services"
   style={{
-    border: "1px solid rgba(0, 0, 0, 0.24)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 1 ? "#111" : "#ffffff06",
-    color: active === 1 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
+    padding: "60px 20px",
+    position: "relative",
+    zIndex: 10
   }}
 >
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Professional Website Design & Development
-  </h3>
+  <h2 style={{ textAlign: "center", fontSize: "32px", fontWeight: "bold" }}>
+    Our Services
+  </h2>
 
+  {/* GRID */}
   <div
     style={{
-      maxHeight: active === 1 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+      gap: "20px",
+      maxWidth: "1000px",
+      margin: "40px auto",
+      alignItems: "start"
     }}
   >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Business / Corporate Websites</li>
-      <li>E-commerce Stores</li>
-      <li>Landing Pages</li>
-      <li>Brochure Websites</li>
-      <li>Portfolio Websites</li>
-      <li>Blog / Content Websites</li>
-    </ul>
+
+    {/* CARD TEMPLATE STYLE (used in all cards) */}
+
+    {/* CARD 1 */}
+    <div
+      onClick={() => setActive(prev => (prev === 1 ? null : 1))}
+      style={{
+        width: "100%",
+        padding: "22px",
+        borderRadius: "16px",
+        border: "1px solid rgba(0,0,0,0.24)",
+        background: active === 1 ? "#111" : "#ffffff06",
+        color: active === 1 ? "#fff" : "#111",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+        position: "relative",
+        zIndex: active === 1 ? 10 : 1
+      }}
+    >
+      <h3>Professional Website Design & Development</h3>
+
+      <div
+        style={{
+          maxHeight: active === 1 ? "500px" : "0px",
+          overflow: "hidden",
+          opacity: active === 1 ? 1 : 0,
+          transform: active === 1 ? "translateY(0px)" : "translateY(-10px)",
+          transition: "all 0.35s ease"
+        }}
+      >
+        <ul>
+          <li>Business / Corporate Websites</li>
+          <li>E-commerce Stores</li>
+          <li>Landing Pages</li>
+          <li>Portfolio Websites</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 2 */}
+    <div
+      onClick={() => setActive(prev => (prev === 2 ? null : 2))}
+      style={{
+        width: "100%",
+        padding: "22px",
+        borderRadius: "16px",
+        border: "1px solid rgba(0,0,0,0.24)",
+        background: active === 2 ? "#111" : "#ffffff06",
+        color: active === 2 ? "#fff" : "#111",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+        position: "relative",
+        zIndex: active === 2 ? 10 : 1
+      }}
+    >
+      <h3>Website Setup & Launch</h3>
+
+      <div
+        style={{
+          maxHeight: active === 2 ? "500px" : "0px",
+          overflow: "hidden",
+          opacity: active === 2 ? 1 : 0,
+          transform: active === 2 ? "translateY(0px)" : "translateY(-10px)",
+          transition: "all 0.35s ease"
+        }}
+      >
+        <ul>
+          <li>Domain setup</li>
+          <li>Hosting setup</li>
+          <li>Website deployment</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 3 */}
+    <div
+      onClick={() => setActive(prev => (prev === 3 ? null : 3))}
+      style={{
+        width: "100%",
+        padding: "22px",
+        borderRadius: "16px",
+        border: "1px solid rgba(0,0,0,0.24)",
+        background: active === 3 ? "#111" : "#ffffff06",
+        color: active === 3 ? "#fff" : "#111",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+        position: "relative",
+        zIndex: active === 3 ? 10 : 1
+      }}
+    >
+      <h3>Website Maintenance & Support</h3>
+
+      <div
+        style={{
+          maxHeight: active === 3 ? "500px" : "0px",
+          overflow: "hidden",
+          opacity: active === 3 ? 1 : 0,
+          transform: active === 3 ? "translateY(0px)" : "translateY(-10px)",
+          transition: "all 0.35s ease"
+        }}
+      >
+        <ul>
+          <li>Updates</li>
+          <li>Technical support</li>
+          <li>Backups</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 4 */}
+    <div
+      onClick={() => setActive(prev => (prev === 4 ? null : 4))}
+      style={{
+        width: "100%",
+        padding: "22px",
+        borderRadius: "16px",
+        border: "1px solid rgba(0,0,0,0.24)",
+        background: active === 4 ? "#111" : "#ffffff06",
+        color: active === 4 ? "#fff" : "#111",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+        position: "relative",
+        zIndex: active === 4 ? 10 : 1
+      }}
+    >
+      <h3>Website Performance Optimization</h3>
+
+      <div style={{
+        maxHeight: active === 4 ? "500px" : "0px",
+        overflow: "hidden",
+        opacity: active === 4 ? 1 : 0,
+        transition: "all 0.35s ease"
+      }}>
+        <ul>
+          <li>Speed improvements</li>
+          <li>Image optimization</li>
+          <li>Performance tuning</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 5 */}
+    <div onClick={() => setActive(prev => (prev === 5 ? null : 5))} style={{
+      width: "100%",
+      padding: "22px",
+      borderRadius: "16px",
+      border: "1px solid rgba(0,0,0,0.24)",
+      background: active === 5 ? "#111" : "#ffffff06",
+      color: active === 5 ? "#fff" : "#111",
+      cursor: "pointer",
+      position: "relative",
+      zIndex: active === 5 ? 10 : 1
+    }}>
+      <h3>Branding & Website Package</h3>
+      <div style={{
+        maxHeight: active === 5 ? "500px" : "0px",
+        overflow: "hidden",
+        opacity: active === 5 ? 1 : 0,
+        transition: "all 0.35s ease"
+      }}>
+        <ul>
+          <li>Logo design</li>
+          <li>Brand identity</li>
+          <li>Full website design</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 6 */}
+    <div onClick={() => setActive(prev => (prev === 6 ? null : 6))} style={{
+      width: "100%",
+      padding: "22px",
+      borderRadius: "16px",
+      border: "1px solid rgba(0,0,0,0.24)",
+      background: active === 6 ? "#111" : "#ffffff06",
+      color: active === 6 ? "#fff" : "#111",
+      cursor: "pointer",
+      position: "relative",
+      zIndex: active === 6 ? 10 : 1
+    }}>
+      <h3>Integrations & Add-ons</h3>
+      <div style={{
+        maxHeight: active === 6 ? "500px" : "0px",
+        overflow: "hidden",
+        opacity: active === 6 ? 1 : 0,
+        transition: "all 0.35s ease"
+      }}>
+        <ul>
+          <li>Payment systems</li>
+          <li>Booking systems</li>
+          <li>Email marketing</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 7 */}
+    <div onClick={() => setActive(prev => (prev === 7 ? null : 7))} style={{
+      width: "100%",
+      padding: "22px",
+      borderRadius: "16px",
+      border: "1px solid rgba(0,0,0,0.24)",
+      background: active === 7 ? "#111" : "#ffffff06",
+      color: active === 7 ? "#fff" : "#111",
+      cursor: "pointer",
+      position: "relative",
+      zIndex: active === 7 ? 10 : 1
+    }}>
+      <h3>SEO Optimization</h3>
+      <div style={{
+        maxHeight: active === 7 ? "500px" : "0px",
+        overflow: "hidden",
+        opacity: active === 7 ? 1 : 0,
+        transition: "all 0.35s ease"
+      }}>
+        <ul>
+          <li>Google ranking</li>
+          <li>Meta tags</li>
+          <li>Speed SEO</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* CARD 8 */}
+    <div onClick={() => setActive(prev => (prev === 8 ? null : 8))} style={{
+      width: "100%",
+      padding: "22px",
+      borderRadius: "16px",
+      border: "1px solid rgba(0,0,0,0.24)",
+      background: active === 8 ? "#111" : "#ffffff06",
+      color: active === 8 ? "#fff" : "#111",
+      cursor: "pointer",
+      position: "relative",
+      zIndex: active === 8 ? 10 : 1
+    }}>
+      <h3>Website Security</h3>
+      <div style={{
+        maxHeight: active === 8 ? "500px" : "0px",
+        overflow: "hidden",
+        opacity: active === 8 ? 1 : 0,
+        transition: "all 0.35s ease"
+      }}>
+        <ul>
+          <li>SSL setup</li>
+          <li>Security plugins</li>
+          <li>Protection</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
  
-        
-    
-          {/* CARD 2 */}
-          <div
-  onClick={() => setActive(active === 2 ? null : 2)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.24)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 2 ? "#111" : "#ffffff18",
-    color: active === 2 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Website Setup & Launch
-  </h3>
 
-  <div
-    style={{
-      maxHeight: active === 2 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Domain setup</li>
-      <li>Hosting setuo</li>
-    
-     <li>Full Websites deployment</li>
+
+
       
-    </ul>
-  </div>
-</div>
- 
-
-
- {/* CARD 3 */}
-          <div
-  onClick={() => setActive(active === 3 ? null : 3)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.21)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 3 ? "#111" : "#ffffff18",
-    color: active === 3 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Website Maintenance & Support
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 3 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Regular updates</li>
-                <li>Technical support</li>
-                <li>Backups</li>
-                <li>Minor changes</li>
-                
-
-    </ul>
-  </div>
-</div>
- 
-
-
-
-{/* CARD 4 */}
-          <div
-  onClick={() => setActive(active === 4 ? null : 4)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.22)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 4 ? "#111" : "#ffffff18",
-    color: active === 4 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Website Performance Optimisation
-
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 4 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Speed improvements</li>
-                <li>Image optimisation</li>
-                <li>Performance tuning</li>
-
-                
-
-    </ul>
-  </div>
-</div>
- 
-
-
-
-{/* CARD 5 */}
-         <div
-  onClick={() => setActive(active === 5 ? null : 5)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.23)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 5 ? "#111" : "#ffffff18",
-    color: active === 5 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Branding & Website Package
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 5 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Logo design</li>
-                <li>Brand styling</li>
-                <li>Full website design</li>
-
-
-              
-    </ul>
-  </div>
-</div>
- 
-
-
-
-{/* CARD 6 */}
-          <div
-  onClick={() => setActive(active === 6 ? null : 6)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.18)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 6 ? "#111" : "#ffffff18",
-    color: active === 6 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Integrations & Add-Ons
-
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 6 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Payment integrations</li>
-                <li>Booking systems</li>
-                <li>Chat systems</li>
-                <li>Email marketing integration</li>
-                <li>Speed plugins</li>
-
-
-
-              
-    </ul>
-  </div>
-</div>
- 
-
-
-          {/* CARD 7 */}
-          <div
-  onClick={() => setActive(active === 7 ? null : 7)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.21)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 7 ? "#111" : "#ffffff18",
-    color: active === 7 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    SEO Optimisation
-
-
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 7 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>Google Ranking</li>
-                <li>Speed Optimization</li>
-                <li>Meta Tags</li>
-
-   
-    </ul>
-  </div>
-</div>
- 
-
-
-{/* CARD 8 */}
-          <div
-  onClick={() => setActive(active === 8 ? null : 8)}
-  style={{
-    border: "1px solid rgba(0, 0, 0, 0.22)",
-    padding: "22px",
-    borderRadius: "16px",
-    background: active === 8 ? "#111" : "#ffffff18",
-    color: active === 8 ? "#ffffffea" : "#111",
-    cursor: "pointer",
-    maxWidth: "420px",
-    margin: "20px auto",
-    transition: "all 0.35s ease",
-    animation: "floatCard 4s ease-in-out infinite",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "scale(1)";
-    e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.05)";
-  }}
->
-  <h3 style={{ fontSize: "18px", marginBottom: "10px" }}>
-    Website Security
-
-
-
-  </h3>
-
-  <div
-    style={{
-      maxHeight: active === 8 ? "200px" : "0px",
-      overflow: "hidden",
-      transition: "all 0.4s ease"
-    }}
-  >
-    <ul style={{ marginTop: "10px", paddingLeft: "18px" }}>
-      <li>SSL setup</li>
-                <li>Security plugins</li>
-                <li>Basic protection</li>
-
-
-   
-    </ul>
-  </div>
-</div>
- 
-
-
-
-        </div>
-      </section>
-
 
 
       {/* PORTFOLIO */}
