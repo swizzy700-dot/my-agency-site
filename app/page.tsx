@@ -622,7 +622,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
     <button
   onClick={() =>
     window.location.href =
-      "mailto:mainlinerandyptyltd@email.com?subject=Quote Request from Website&body=Hi MLR,%0D%0A%0D%0AI would like to request a quote for a website project.%0D%0A%0D%0AThank you."
+      "mailto:mainlinerandyptyltd@email.com,info@mainlinemlr.com?subject=Quote Request from Website&body=Hi MLR,%0D%0A%0D%0AI would like to request a quote for a website project.%0D%0A%0D%0AThank you."
   }
   style={{
     marginTop: "20px",
@@ -734,7 +734,7 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
     <p style={{ margin: "1px 0", fontSize: "15px" }}>
       ✉️ Email:{" "}
       <a
-        href="mailto:mainlinerandyptyltd@email.com"
+  href="mailto:mainlinerandyptyltd@email.com,info@mainlinemlr.com"
         style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
       >
         Send Email
