@@ -2,8 +2,9 @@ body {
   margin: 0;
   padding: 0;
   background: radial-gradient(circle at top, #0b1424 0%, #07101a 35%, #030408 100%);
-  color: #000;
+  color: #c1657f;
   font-family: Arial, sans-serif;
+  font-size: 18px;
   overflow-x: hidden;
 }
 

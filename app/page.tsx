@@ -11,7 +11,7 @@ const [showFAQ, setShowFAQ] = useState(false);
     <main style={{
   fontFamily: "Arial",
   background: "linear-gradient(180deg, #f9fafb05 0%, #f5eeee2d 100%)",
-  color: "#111",
+  color: "#c1657f",
   minHeight: "100vh"
 }}>
 
@@ -154,7 +154,7 @@ const [showFAQ, setShowFAQ] = useState(false);
 <div className="bg-light" style={{ top: "60%", right: "10%" }}></div>
 
 
-        <p style={{ marginTop: "30px", fontSize: "15px", color: "#0b0303b1" }}>
+        <p style={{ marginTop: "30px", fontSize: "15px", color: "#c1657f" }}>
 MLR is positioned as a premium digital partner for businesses that seek more than just a website but a powerful, results-driven online presence.
 
 We work with ambitious brands, growing enterprises, and forward-thinking business owners who understand that investing in quality digital infrastructure is essential for long-term success.
@@ -711,35 +711,20 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
       <a
         href="https://wa.me/27659890691"
         target="_blank"
-        style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
-      >
-        Chat Now
-      </a>
-    </p>
-
-{/* Phone Call */}
+        style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
 <p style={{ margin: "50px 0", fontSize: "17px" }}>
       📞 Call:{" "}
       <a
         href="tel:+27659890691"
         target="_blank"
-        style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
-      >
-        Call Now
-      </a>
-    </p>
-
+        style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
 
     {/* Email */}
     <p style={{ margin: "1px 0", fontSize: "15px" }}>
       ✉️ Email:{" "}
       <a
   href="mailto:mainlinerandyptyltd@email.com,info@mainlinemlr.com"
-        style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
-      >
-        Send Email
-      </a>
-    </p>
+        style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
 
   </div>
 
