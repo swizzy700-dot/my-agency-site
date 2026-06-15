@@ -711,20 +711,34 @@ MLR is not designed for mass, low-cost production. Instead, we are dedicated to 
       <a
         href="https://wa.me/27659890691"
         target="_blank"
-        style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
-<p style={{ margin: "50px 0", fontSize: "17px" }}>
+        style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
+      >
+        Chat Now
+      </a>
+    </p>
+
+    {/* Phone Call */}
+    <p style={{ margin: "50px 0", fontSize: "17px" }}>
       📞 Call:{" "}
       <a
         href="tel:+27659890691"
         target="_blank"
         style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
+      >
+        Call Now
+      </a>
+    </p>
 
     {/* Email */}
     <p style={{ margin: "1px 0", fontSize: "15px" }}>
       ✉️ Email:{" "}
       <a
-  href="mailto:mainlinerandyptyltd@email.com,info@mainlinemlr.com"
+        href="mailto:mainlinerandyptyltd@email.com,info@mainlinemlr.com"
         style={{ color: "#c1657f", fontWeight: "500", textDecoration: "none" }}
+      >
+        Send Email
+      </a>
+    </p>
 
   </div>
 
